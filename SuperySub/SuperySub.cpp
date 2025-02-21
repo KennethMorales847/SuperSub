@@ -51,6 +51,46 @@ public:
     }
 };
 
+class VjPC : public Videojuegos {
+private:
+    string requisitos;
+
+public:
+    //Constructor
+
+    VjPC(string n, string g, int l, float p, string r) :
+        Videojuegos(n, g, l, p), requisitos(r) {}
+
+    //Metodos
+
+    void mostrarInfo() override {
+        Videojuegos::mostrarInfo();
+        cout <<
+            "Requisitos: " << requisitos << endl;
+
+    }
+};
+
+class VjCon : public Videojuegos {
+private:
+    string consolas;
+
+public:
+    //Constructor
+
+    VjCon(string n, string g, int l, float p, string c) :
+        Videojuegos(n, g, l, p), consolas(c) {}
+
+    //Metodos
+
+    void mostrarInfo() override {
+        Videojuegos::mostrarInfo();
+        cout <<
+            "Consolas: " << consolas << endl;
+
+    }
+};
+
 
 int main()
 {
